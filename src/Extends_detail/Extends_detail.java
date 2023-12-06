@@ -1,6 +1,6 @@
 package Extends_detail;
 
-public class Extends_detail {
+public class   Extends_detail {
     public static void main(String[] args) {
         new cat();
         hashiqi ha = new hashiqi();
@@ -11,8 +11,8 @@ public class Extends_detail {
 
 
         taidi tai = new taidi();
-//        tai.eat();
-//        tai.drink();
+        tai.eat();
+        tai.drink();
 
     }
 }
