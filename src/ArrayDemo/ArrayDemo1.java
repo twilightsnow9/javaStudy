@@ -12,6 +12,5 @@ public class ArrayDemo1 {
         }
 //        System.out.println(a[0]);
 //        /*把数据存储在数组当中*/
-
     }
 }
