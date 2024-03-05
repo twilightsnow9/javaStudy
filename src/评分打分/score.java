@@ -11,7 +11,7 @@ public class score {
             double a = sc.nextInt();
             arr[i] = a;
         }
-main();
+
         double max = 0;
         for (int i = 0; i < arr.length; i++) {
             if (max < arr[i]) {
