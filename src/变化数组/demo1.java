@@ -14,19 +14,24 @@ public class demo1 {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
                 arr[i] = arr[i] / 2;
-                while (a < arr1.length) {
-                    arr1[a] = arr[i];
-                    System.out.println(arr1[a]);
-                    a++;
-                }
+                arr1[a] = arr[i];
+//                System.out.println(arr1[a]);
+                a++;
             } else {
                 arr[i] = arr[i] * 2;
-                while (b < arr2.length) {
-                    arr2[b] = arr[i];
-                    System.out.println(arr2[b]);
-                    b++;
-                }
+                arr2[b] = arr[i];
+//                System.out.println(arr2[b]);
+                b++;
             }
+        }
+        System.out.println();
+
+        for (int i : arr1) {
+            System.out.println(i);
+        }
+        System.out.println();
+        for (int i : arr2) {
+            System.out.println(i);
         }
     }
 }
