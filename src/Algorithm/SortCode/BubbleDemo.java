@@ -2,7 +2,7 @@ package Algorithm.SortCode;
 
 public class BubbleDemo {
     public static void main(String[] args) {
-        int[] arr = {1,4,5,6,7,8,2,3};
+        int[] arr = {24,69,80,57,13};
         Bubble(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);

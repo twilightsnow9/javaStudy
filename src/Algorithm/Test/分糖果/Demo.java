@@ -13,7 +13,6 @@ public class Demo {
             }
             return;
         }
-
         for (int i = 0; i <= a; i++) {
             for (int j = 0; j <= b; j++) {
                 if (i + j >=2 && i + j <=5) {

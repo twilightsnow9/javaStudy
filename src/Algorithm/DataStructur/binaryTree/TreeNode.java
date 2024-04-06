@@ -1,9 +1,9 @@
-package Algorithm.DataStructur;
+package Algorithm.DataStructur.binaryTree;
 
 public class TreeNode {
-    private int val;
-    public TreeNode left;
-    public TreeNode right;
+    public int val; //节点值
+    public TreeNode left; //做孩子
+    public TreeNode right; //右孩子
     public TreeNode(int val) {
         this.val = val;
     }
@@ -13,6 +13,4 @@ public class TreeNode {
         this.val = val;
         this.right = right;
     }
-
-
 }

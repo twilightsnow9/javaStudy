@@ -1,0 +1,30 @@
+package Algorithm.Test.Count;
+
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        double l = sc.nextDouble();
+        double r = sc.nextDouble();
+        double[] arr = new double[N + 1];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextDouble();
+        }
+        int m = 0;
+//      反向遍历
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+//            f(x) = arr[N] * x ^ N + arr[N - 1] * x ^ (N - 1).....
+        }
+        for (int i = N; i >= 0; i--) {
+            System.out.println(N--);
+        }
+
+    }
+
+    public static void fun(double m) {
+
+    }
+}

@@ -1,42 +1,42 @@
 package Algorithm.Test.八皇后;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Demo {
+    static int l = 0;
     public static void main(String[] args) {
-        int[][] arr = new int[8][8];
-        queen(arr,1,1);
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[][] arr = new int[N][N];
+//        标记冲突
+//        标记列冲突
+        boolean[] ca = new boolean[N];
+//        标记左斜线
+        boolean[] cb = new boolean[2 * N - 1];
+//        标记右斜线
+        boolean[] cc = new boolean[2 * N - 1];
+        queen(arr,0,N,ca,cb,cc);
     }
-//一个8*8的二维数组
+    //一个8*8的二维数组
 //    前后的点不能出现横竖斜连起来
-    public static boolean queen(int[][] arr,int i,int j) {
-        if (arr[7][j] == 1) {
-            return true;
+    public static void queen(int[][] arr,int i,int N,boolean[] ca,boolean[] cb,boolean[] cc) {
+//        0 为可以没有走, 1 为走通  3 为走过未走通
+        if (i == N) { //找到出口
+            l++;
+            System.out.println(l);
+            return;
         }
-        if (arr[i][j] != arr[i + 1][j]) {
-            arr[i][j] = 1;
-            if (queen(arr,i + 1,j)) {
-                System.out.println(i + " " + j);
-            } else if (queen(arr,i + 1,j - 1)) {
-                System.out.println(i + " " + j);
-                return true;
-            } else if (queen(arr,i + 1,j + 1)) {
-                System.out.println(i + " " + j);
-                return true;
-            } else if (queen(arr,i - 1,j)) {
-                System.out.println(i + " " + j);
-                return true;
-            } else if (queen(arr,i - 1,j - 1)) {
-                System.out.println(i + " " + j);
-                return true;
-            } else if (queen(arr,i - 1,j + 1)) {
-                System.out.println(i + " " + j);
-                return true;
-            } else {
-                return false;
+        for (int j = 0; j < N; j++) {
+            if (ca[j] || cb[i + j] || cc[N - 1 -(i - j)]) {
+                continue;
             }
-        } else {
-            return false;
+            arr[i][j] = 1;
+            ca[j] = cb[i + j] = cc[N - 1 - (i - j)] = true;
+            queen(arr,i + 1, N ,ca,cb,cc);
+            arr[i][j] = 0;
+            ca[j] = cb[i + j] = cc[N - 1 - (i - j)] = false;
 
         }
-        return false;
     }
 }
